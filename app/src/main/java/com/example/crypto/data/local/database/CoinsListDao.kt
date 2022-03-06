@@ -22,7 +22,7 @@ interface CoinsListDao {
 
     //Запрос для получения первичных ключей у избранных криптовалют
     @Query("SELECT symbol FROM coins_list WHERE isFavourite = 1")
-    suspend fun favouriteFromSymbols(): List<String>
+    suspend fun favouriteSymbols(): List<String>
 
     //Добвления данных в таблицу
     @Insert(onConflict = OnConflictStrategy.REPLACE)

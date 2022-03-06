@@ -8,7 +8,7 @@ data class CoinsListEntity(
     @PrimaryKey val symbol: String,
     val id: String?,
     val name: String?,
-    val price: String?,
+    val price: Double?,
     val changePercent: Double? = null,
     val image: String? = null,
     val isFavourite: Boolean = false
