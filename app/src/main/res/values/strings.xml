@@ -4,4 +4,6 @@
     <string name="favourites">Избранное</string>
     <string name="hello_favourites_fragment">Hello Favorites Fragment</string>
     <string name="hello_coin_list_fragment">Hello Coin List Fragment</string>
+    <string name="error_load_coins_list">Не удалось получить список валют, пожалуйста попробуйте ещё раз</string>
+    <string name="error_empty_favorites">Вы ещё не добавили избранное</string>
 </resources>
