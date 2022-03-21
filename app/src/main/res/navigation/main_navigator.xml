@@ -8,12 +8,12 @@
 
     <fragment
         android:id="@+id/navigation_coins_list"
-        android:name="com.example.crypto.CoinListFragment"
+        android:name="com.example.crypto.ui.main.coinList.CoinListFragment"
         android:label="@string/coins"
         tools:layout="@layout/fragment_coin_list"/>
     <fragment
         android:id="@+id/navigation_favourites"
-        android:name="com.example.crypto.FavouritesFragment"
+        android:name="com.example.crypto.ui.main.favorites.FavouritesFragment"
         android:label="@string/favourites"
         tools:layout="@layout/fragment_favourites"/>
 </navigation>
