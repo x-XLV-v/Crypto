@@ -11,8 +11,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.crypto.R
 import com.example.crypto.common.NavigationHost
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 
+@AndroidEntryPoint
 class MainActivity: AppCompatActivity(), NavigationHost {
     private val viewModel: MainViewModel by viewModels()
 
