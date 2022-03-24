@@ -16,7 +16,7 @@ import javax.inject.Inject
 class FavoritesViewModel @Inject constructor(private val repository: FavoriteRepository): ViewModel() {
     //Хранит сообщение об ошибке
     private val _toastError = MutableLiveData<String>()
-    val toastLoading: LiveData<String> = _toastError
+    val toastError: LiveData<String> = _toastError
 
     //Список всех избранных криптовалют
     val favoriteCoinsList: LiveData<List<CoinsListEntity>> = repository.favoriteCoins

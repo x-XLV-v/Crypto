@@ -15,9 +15,11 @@ import com.example.crypto.adapter.OnItemClickCallback
 import com.example.crypto.common.MainNavigationFragment
 import com.example.crypto.databinding.FragmentCoinListBinding
 import com.example.crypto.utils.doOnChange
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_coin_list.*
 import java.time.Duration
 
+@AndroidEntryPoint
 class CoinListFragment: MainNavigationFragment(), OnItemClickCallback {
     private val viewModel: CoinListViewModel by viewModels()
     private lateinit var binding: FragmentCoinListBinding
@@ -75,6 +77,10 @@ class CoinListFragment: MainNavigationFragment(), OnItemClickCallback {
                         "${it.symbol} удалён из избранного"
                 )
             }
+        }
+
+        viewModel.toastError.doOnChange(this) {
+            showToast(it)
         }
     }
 

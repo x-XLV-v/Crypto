@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/baseline_refresh.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/item_favorite.xml" value="0.195" />
         <entry key="app/src/main/res/drawable/item_favorite_border.xml" value="0.195" />
+        <entry key="app/src/main/res/layout/activity_chart.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.178125" />
         <entry key="app/src/main/res/layout/fragment_coin_list.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_favourites.xml" value="0.35625" />

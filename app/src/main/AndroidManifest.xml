@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ui.chart.ChartActivity" android:exported="false"/>
+
     </application>
 
 </manifest>

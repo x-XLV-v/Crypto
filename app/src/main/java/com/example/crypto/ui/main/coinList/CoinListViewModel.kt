@@ -20,7 +20,7 @@ class CoinListViewModel @Inject constructor(private val repository: CoinsListRep
 
     //Хранит сообщение об ошибке
     private val _toastError = MutableLiveData<String>()
-    val toastLoading: LiveData<String> = _toastError
+    val toastError: LiveData<String> = _toastError
 
     //Хранит полный список криптовалют
     val coinsListData = repository.allCoinList
