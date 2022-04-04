@@ -14,7 +14,7 @@ interface CoinsListDao {
     suspend fun coinFromSymbol(symbol: String): CoinsListEntity?
 
     @Query("SELECT * FROM coins_list WHERE symbol = :symbol")
-    fun coinLiveDataFromSymbol(symbol: String): List<CoinsListEntity>
+    fun coinLiveDataFromSymbol(symbol: String): LiveData<CoinsListEntity>
 
     //Запрос для получения только избранных криптовалют
     @Query("SELECT * FROM coins_list WHERE isFavourite = 1")

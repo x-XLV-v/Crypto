@@ -1,5 +1,6 @@
 package com.example.crypto.ui.main.favorites
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,7 +15,9 @@ import com.example.crypto.adapter.OnItemClickCallback
 import com.example.crypto.common.MainNavigationFragment
 import com.example.crypto.databinding.FragmentCoinListBinding
 import com.example.crypto.databinding.FragmentFavouritesBinding
+import com.example.crypto.ui.chart.ChartActivity
 import com.example.crypto.ui.main.coinList.CoinListViewModel
+import com.example.crypto.utils.Constants
 import com.example.crypto.utils.doOnChange
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_coin_list.*
@@ -74,7 +77,15 @@ class FavouritesFragment : MainNavigationFragment(), OnItemClickCallback {
     }
 
     override fun onItemClick(symbol: String, id: String) {
-        TODO("Not yet implemented")
+        requireActivity().run {
+            startActivity(
+                Intent(this, ChartActivity::class.java)
+                    .apply {
+                        putExtra(Constants.EXTRA_SYMBOL, symbol)
+                        putExtra(Constants.EXTRA_SYMBOL_ID, id)
+                    }
+            )
+        }
     }
 
     override fun onFavoriteCLick(symbol: String) {
